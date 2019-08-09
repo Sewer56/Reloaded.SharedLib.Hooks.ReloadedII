@@ -124,6 +124,9 @@ Using a shared library is identical to using a **Controller** in Inter Mod Commu
 
 **A.** Add the NuGet Package *Reloaded.SharedLib.Hooks* to your project: <a href="https://www.nuget.org/packages/Reloaded.SharedLib.Hooks"><img src="https://img.shields.io/nuget/v/Reloaded.SharedLib.Hooks.svg" alt="NuGet" /></a>
 
-**B.** Use like a regular **Controller** via [Inter-Mod-Communication](https://github.com/Reloaded-Project/Reloaded-II/blob/master/Docs/InterModCommunication.md#required-dependencies)
+**B.** Add `reloaded.sharedlib.hooks` as a dependency of the mod `(in ModConfig.json)`.
+
+**C.** Use like a regular **Controller** via [Inter-Mod-Communication](https://github.com/Reloaded-Project/Reloaded-II/blob/master/Docs/InterModCommunication.md#required-dependencies)
 
 Of course, you should also download and extract the shared library (mod) to your mods folder.
+
