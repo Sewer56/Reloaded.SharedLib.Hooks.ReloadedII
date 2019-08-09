@@ -5,6 +5,7 @@
 	<strong>Sharing is Caring</strong>
     <p>I don't know much about sharing Hookers<br/>
     but having some common Blackjack is ok.</p>
+<b>Id: reloaded.sharedlib.hooks</b>
 </div>
 
 # Table of Contents
