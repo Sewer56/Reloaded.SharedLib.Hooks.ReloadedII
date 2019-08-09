@@ -51,7 +51,9 @@ When individual mods have their own isolated libraries loaded, each library's co
 
 When you use a shared library, as the code is shared, it only becomes JIT-ted once. We go from a JIT startup overhead of 0.9s to 0.2s.
 
-*<TODO: Insert Image of Improved Loads After Switching Mods to Shared Lib>*
+![LoadTimeExampleAfter](./Images/LoadTimeExampleAfter.png)
+
+*268ms! Then the library is loaded and all other mods do not suffer such long setup times.*
 
 #### Small Mod Sizes & Low Memory Usage
 
