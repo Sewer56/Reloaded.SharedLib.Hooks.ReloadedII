@@ -2,10 +2,29 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>Reloaded.SharedLib.Hooks</PackageId>
+    <Authors>Sewer56</Authors>
+    <Product />
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Description>Contains the interfaces that expose Reloaded.Hooks as a Reloaded II (Reloaded Mod Loader II) shared library.</Description>
+    <Copyright>LGPL V3</Copyright>
+    <PackageProjectUrl>https://github.com/Sewer56/Reloaded.SharedLib.Hooks</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Sewer56/Reloaded.SharedLib.Hooks</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageIconUrl>https://avatars1.githubusercontent.com/u/45473408</PackageIconUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Reloaded.Hooks.Definitions" Version="1.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
