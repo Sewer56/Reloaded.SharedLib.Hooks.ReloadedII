@@ -14,6 +14,10 @@
     <PackageIconUrl>https://avatars1.githubusercontent.com/u/45473408</PackageIconUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
