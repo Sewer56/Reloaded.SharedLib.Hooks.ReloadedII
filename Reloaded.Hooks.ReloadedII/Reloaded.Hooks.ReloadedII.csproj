@@ -7,14 +7,6 @@
     <Version>1.0.0</Version>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <OutputPath>C:\Users\Sewer56\Desktop\Reloaded II\Mods\reloaded.sharedlib.hooks\</OutputPath>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>C:\Users\Sewer56\Desktop\Reloaded II\Mods\reloaded.sharedlib.hooks\</OutputPath>
-  </PropertyGroup>
-
   <ItemGroup>
     <None Remove="ModConfig.json" />
     <None Remove="Preview.png" />
