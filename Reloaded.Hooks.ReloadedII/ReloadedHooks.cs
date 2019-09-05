@@ -1,49 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Reloaded.Hooks.Definitions;
-using Reloaded.Hooks.Definitions.Enums;
-using Reloaded.Hooks.Definitions.X86;
-using Reloaded.Hooks.ReloadedII.Interfaces;
-using Reloaded.Hooks.Tools;
+﻿using IReloadedHooks = Reloaded.Hooks.ReloadedII.Interfaces.IReloadedHooks;
 
 namespace Reloaded.Hooks.ReloadedII
 {
-    public class ReloadedHooks : IReloadedHooks
+    /* There used to be a class here, implementation is now moved to main Reloaded.Hooks library. */
+    public class ReloadedHooks : Reloaded.Hooks.ReloadedHooks, IReloadedHooks
     {
-        public IHook<TFunction> CreateHook<TFunction>(TFunction function, long functionAddress, int minHookLength = -1)                                                             => new Hook<TFunction>(function, functionAddress, minHookLength);
-        public IntPtr CreateNativeWrapperX86<TFunction>(IntPtr functionAddress, IFunctionAttribute fromFunction)                                                                    => X86.Wrapper.Create<TFunction>(functionAddress, fromFunction);
-        public IntPtr CreateNativeWrapperX64<TFunction>(IntPtr functionAddress, Definitions.X64.IFunctionAttribute fromConvention, Definitions.X64.IFunctionAttribute toConvention) => X64.Wrapper.Create<TFunction>(functionAddress, fromConvention, toConvention);
 
-        public TFunction CreateWrapper<TFunction>(long functionAddress, out IntPtr wrapperAddress)
-        {
-            if (IntPtr.Size == 4)
-                return X86.Wrapper.Create<TFunction>(functionAddress, out wrapperAddress);
-
-            return X64.Wrapper.Create<TFunction>(functionAddress, out wrapperAddress);
-        }
-
-        public IReverseWrapper<TFunction> CreateReverseWrapper<TFunction>(TFunction function)
-        {
-            if (IntPtr.Size == 4)
-                return new X86.ReverseWrapper<TFunction>(function);
-
-            return new X64.ReverseWrapper<TFunction>(function);
-        }
-
-        public IReverseWrapper<TFunction> CreateReverseWrapper<TFunction>(IntPtr function)
-        {
-            if (IntPtr.Size == 4)
-                return new X86.ReverseWrapper<TFunction>(function);
-
-            return new X64.ReverseWrapper<TFunction>(function);
-        }
-
-        public IVirtualFunctionTable VirtualFunctionTableFromObject(IntPtr objectAddress, int numberOfMethods) => VirtualFunctionTable.FromObject(objectAddress, numberOfMethods);
-        public IVirtualFunctionTable VirtualFunctionTableFromAddress(IntPtr tableAddress, int numberOfMethods) => VirtualFunctionTable.FromAddress(tableAddress, numberOfMethods);
-        public IFunctionPtr<TDelegate> CreateFunctionPtr<TDelegate>(ulong functionPointer) where TDelegate : Delegate => new FunctionPtr<TDelegate>(functionPointer);
-
-        public IAsmHook CreateAsmHook(string[] asmCode, long functionAddress, AsmHookBehaviour behaviour = AsmHookBehaviour.ExecuteFirst, int hookLength = -1) => new AsmHook(asmCode, functionAddress, behaviour, hookLength);
-        public IAsmHook CreateAsmHook(byte[] asmCode, long functionAddress, AsmHookBehaviour behaviour = AsmHookBehaviour.ExecuteFirst, int hookLength = -1) => new AsmHook(asmCode, functionAddress, behaviour, hookLength);
     }
 }

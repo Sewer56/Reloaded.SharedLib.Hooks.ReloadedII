@@ -1,8 +1,8 @@
 ﻿using System;
 using Reloaded.Hooks.Definitions;
-using Reloaded.Hooks.ReloadedII.Interfaces;
 using Reloaded.Mod.Interfaces;
 using Reloaded.Mod.Interfaces.Internal;
+using IReloadedHooks = Reloaded.Hooks.ReloadedII.Interfaces.IReloadedHooks;
 
 namespace Reloaded.Hooks.ReloadedII
 {
@@ -17,7 +17,7 @@ namespace Reloaded.Hooks.ReloadedII
 
             /* Your mod code starts here. */
             _reloadedHooks = new ReloadedHooks();
-            _modLoader.AddOrReplaceController<IReloadedHooks>(this, _reloadedHooks);
+            _modLoader.AddOrReplaceController(this, _reloadedHooks);
         }
 
         /* Mod loader actions. */
