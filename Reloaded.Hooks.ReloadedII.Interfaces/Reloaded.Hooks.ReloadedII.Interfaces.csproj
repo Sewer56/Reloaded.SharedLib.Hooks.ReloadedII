@@ -17,11 +17,11 @@
 
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
 
-    <Version>1.2.0</Version>
+    <Version>1.4.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Reloaded.Hooks.Definitions" Version="1.2.0" />
+    <PackageReference Include="Reloaded.Hooks.Definitions" Version="1.4.0" />
   </ItemGroup>
 
   <ItemGroup>
