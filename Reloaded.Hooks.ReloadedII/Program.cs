@@ -11,6 +11,7 @@ namespace Reloaded.Hooks.ReloadedII
         private IModLoader _modLoader;
         private IReloadedHooks _reloadedHooks;
 
+        public static void Main() { }
         public void Start(IModLoaderV1 loader)
         {
             _modLoader = (IModLoader)loader;

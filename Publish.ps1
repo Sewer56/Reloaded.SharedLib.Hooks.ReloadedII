@@ -1,5 +1,6 @@
 # Project Output Paths
-$modOutputPath = "Reloaded.Hooks.ReloadedII/bin"
+$modOutputPath = "Release"
+
 $solutionName = "Reloaded.Hooks.ReloadedII.sln"
 $publishName = "reloaded.sharedlib.hooks.zip"
 $publishDirectory = "Publish"
@@ -8,10 +9,27 @@ if ([System.IO.Directory]::Exists($publishDirectory)) {
 	Get-ChildItem $publishDirectory -Include * -Recurse | Remove-Item -Force -Recurse
 }
 
+# Prepare
+Remove-Item $modOutputPath -Recurse
+
+# Make new directory for Release if needed.
+if (![System.IO.Directory]::Exists($modOutputPath)) {
+    New-Item $modOutputPath -ItemType Directory
+}
+
 # Build
 dotnet restore $solutionName
 dotnet clean $solutionName
-dotnet build -c Release $solutionName
+dotnet build $solutionName
+dotnet publish $solutionName -c Release --self-contained false -o "$modOutputPath"
+dotnet publish $solutionName -c Release -r win-x86 --self-contained false -o "$modOutputPath/x86" /p:PublishReadyToRun=true
+dotnet publish $solutionName -c Release -r win-x64 --self-contained false -o "$modOutputPath/x64" /p:PublishReadyToRun=true
+
+# Remove Redundant Files
+Remove-Item "$modOutputPath/x86/Preview.png"
+Remove-Item "$modOutputPath/x64/Preview.png"
+Remove-Item "$modOutputPath/x86/ModConfig.json"
+Remove-Item "$modOutputPath/x64/ModConfig.json"
 
 # Cleanup
 Get-ChildItem $modOutputPath -Include *.pdb -Recurse | Remove-Item -Force -Recurse
@@ -24,4 +42,4 @@ if (![System.IO.Directory]::Exists($publishDirectory)) {
 
 # Compress
 Add-Type -A System.IO.Compression.FileSystem
-[IO.Compression.ZipFile]::CreateFromDirectory( $modOutputPath + '/Release', 'Publish/' + $publishName)
+[IO.Compression.ZipFile]::CreateFromDirectory($modOutputPath, 'Publish/' + $publishName)
