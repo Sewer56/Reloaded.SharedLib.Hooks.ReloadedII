@@ -25,7 +25,8 @@ Remove-Item "$modOutputPath/x64/Preview.png"
 Remove-Item "$modOutputPath/x86/ModConfig.json"
 Remove-Item "$modOutputPath/x64/ModConfig.json"
 
-# Cleanup
+# Cleanup Unnecessary Files
+Get-ChildItem $modOutputPath -Include *.exe -Recurse | Remove-Item -Force -Recurse
 Get-ChildItem $modOutputPath -Include *.pdb -Recurse | Remove-Item -Force -Recurse
 Get-ChildItem $modOutputPath -Include *.xml -Recurse | Remove-Item -Force -Recurse
 
