@@ -9,8 +9,6 @@ $publishDirectory = "Publish"
 # Clean anything in existing Release directory.
 Remove-Item $modOutputPath -Recurse
 Remove-Item $publishDirectory -Recurse
-
-# Make new directory for Release if needed.
 New-Item $modOutputPath -ItemType Directory
 New-Item $publishDirectory -ItemType Directory
 
