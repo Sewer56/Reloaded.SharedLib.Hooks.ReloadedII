@@ -1,6 +1,6 @@
 # Project Output Paths
 $modOutputPath = "Release"
-$solutionName = "Reloaded.Hooks.ReloadedII.sln"
+$solutionName = "Reloaded.Hooks.ReloadedII/Reloaded.Hooks.ReloadedII.csproj"
 $publishName = "reloaded.sharedlib.hooks.zip"
 $publishDirectory = "Publish"
 
