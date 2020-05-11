@@ -13,7 +13,7 @@
 - [About This Project](#about-this-project)
   - [What's the Point?](#whats-the-point)
       - [Fast Startup Times](#fast-startup-times)
-      - [Small Mod Sizes & Low Memory Usage](#small-mod-sizes-low-memory-usage)
+      - [Small Mod Sizes &amp; Memory Usage](#small-mod-sizes-and-memory-usage)
       - [Self Updating](#self-updating)
   - [When Should I Use Shared Libraries?](#when-should-i-use-shared-libraries)
       - [Supporting Actively Developed Applications](#supporting-actively-developed-applications)
@@ -26,7 +26,7 @@
 
 The following project is a [Reloaded II](https://github.com/Reloaded-Project/Reloaded-II) Mod Loader Shared Library that serves as both an example on how to build a shared library and general documentation for shared libraries. 
 
-A shared library is simply a Reloaded II mod that provides code that can be used by other mods.
+A *"Shared Library"* is basically a mod which exposes library functionality via [Inter Mod Communication](https://github.com/Reloaded-Project/Reloaded-II/blob/master/Docs/InterModCommunication.md).
 
 ## What's the Point?
 Normally, each mod is executed by Reloaded II in complete isolation to other mods.
@@ -55,7 +55,7 @@ When you use a shared library, as the code is shared, it only becomes JIT-ted on
 
 *268ms! Then the library is loaded and all other mods do not suffer such long setup times.*
 
-#### Small Mod Sizes & Low Memory Usage
+#### Small Mod Sizes and Memory Usage
 
 The footprint of the standalone `Reloaded.Hooks` library and its dependencies is 1.8MB. This 1.8MB is loaded into memory for every single mod which uses the library, causing memory to be slowly eaten up. 
 
