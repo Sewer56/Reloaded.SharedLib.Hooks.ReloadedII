@@ -10,6 +10,7 @@ namespace Reloaded.Hooks.ReloadedII
     {
         private IModLoader _modLoader;
         private IReloadedHooks _reloadedHooks;
+        private IReloadedHooksUtilities _utilities;
 
         public static void Main() { }
         public void Start(IModLoaderV1 loader)
@@ -18,7 +19,9 @@ namespace Reloaded.Hooks.ReloadedII
 
             /* Your mod code starts here. */
             _reloadedHooks = new ReloadedHooks();
+            _utilities = new ReloadedHooksUtilities();
             _modLoader.AddOrReplaceController(this, _reloadedHooks);
+            _modLoader.AddOrReplaceController(this, _utilities);
         }
 
         /* Mod loader actions. */
@@ -31,7 +34,7 @@ namespace Reloaded.Hooks.ReloadedII
 
         /* Automatically called by the mod loader when the mod is about to be unloaded. */
         public Action Disposing { get; }
-        public Type[] GetTypes() => new[] { typeof(IReloadedHooks), typeof(IHook<>) };
+        public Type[] GetTypes() => new[] { typeof(IReloadedHooks), typeof(IReloadedHooksUtilities), typeof(IHook<>) };
 
         // Note: The reason we are Sharing IHook is because the other mods
         // (in their own AssemblyLoadContexts) will also need to load the same instance of the Reloaded.Hooks.Definitions library.
