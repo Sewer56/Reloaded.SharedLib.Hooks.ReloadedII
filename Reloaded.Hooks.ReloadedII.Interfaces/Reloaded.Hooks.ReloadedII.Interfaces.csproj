@@ -14,14 +14,12 @@
     <PackageIconUrl>https://avatars1.githubusercontent.com/u/45473408</PackageIconUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-
-    <Version>1.4.0</Version>
+    <Version>1.5.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Reloaded.Hooks.Definitions" Version="1.*" />
+    <PackageReference Include="Reloaded.Hooks.Definitions" Version="1.7.0" />
   </ItemGroup>
 
   <ItemGroup>

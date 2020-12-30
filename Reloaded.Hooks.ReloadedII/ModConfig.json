@@ -2,7 +2,7 @@
   "ModId": "reloaded.sharedlib.hooks",
   "ModName": "Reloaded II Shared Lib: Reloaded.Hooks",
   "ModAuthor": "Sewer56",
-  "ModVersion": "1.7.1",
+  "ModVersion": "1.8.0",
   "ModDescription": "Lite Implementation of the Reloaded.Hooks library as a mod loader mod. Created in hopes of reducing load times at startup and reducing size of other mods.",
   "ModDll": "Reloaded.Hooks.ReloadedII.dll",
   "ModIcon": "Preview.png",
@@ -10,6 +10,7 @@
   "ModR2RManagedDll64": "x64/Reloaded.Hooks.ReloadedII.dll",
   "ModNativeDll32": "",
   "ModNativeDll64": "",
+  "IsLibrary": true,
   "ModDependencies": [],
   "OptionalDependencies": [],
   "SupportedAppId": []
