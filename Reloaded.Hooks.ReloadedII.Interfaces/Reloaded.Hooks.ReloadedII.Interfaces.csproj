@@ -19,7 +19,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Reloaded.Hooks.Definitions" Version="1.7.1" />
+    <PackageReference Include="Reloaded.Hooks.Definitions" Version="1.8.0" />
   </ItemGroup>
 
   <ItemGroup>
