@@ -89,11 +89,11 @@ Shared libraries should then make use of [Pattern Scanning / Signature Scanning]
 **\*Getting variables:** Use signature scanning to find an instruction that accesses a given variable.
 
 ```
-mov     levelId, edx            // 89 15 [?? ?? ?? ??] <= Level ID
-jmp     short loc_4354A1 		// EB OB
+mov     levelId, edx            // 89 15 [?? ?? ?? ??] <= Level ID | 
+jmp     short loc_4354A1 	// EB ??
 mov     someOtherVariable, eax  // A3 ?? ?? ?? ??
 
-// Signature: 89 15 [?? ?? ?? ??] EB 0B A3 ?? ?? ?? ??
+// Signature: 89 15 [?? ?? ?? ??] EB ?? A3 ?? ?? ?? ??
 // LevelId  : Found Address of Signature + 2
 ```
 
