@@ -37,7 +37,7 @@ artifacts:
 deploy:
 - provider: GitHub
   auth_token:
-    secure: 8Lqo9jP/L0PP7rNCr/FOdV8fc13U3U4kmDY5n9RMajb70SnIjujZz9J4tSGb9rAk
+    secure: 3nktB3Ovacl0onzwjgI+F7MtWvAzl1YMIA5gRE+vsVwKzFHICg1wKlj9O63IIiwS
   force_update: false
   on:
     APPVEYOR_REPO_TAG: true
