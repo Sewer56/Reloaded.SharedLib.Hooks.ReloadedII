@@ -42,7 +42,7 @@ deploy:
   on:
     APPVEYOR_REPO_TAG: true
 - provider: NuGet
-  server: http://167.71.128.50:5000/
+  server: http://packages.sewer56.moe:5000/
   api_key:
     secure: /Ayzh3D/4Otzg80B1jc/6ltVaugqU8TP4fn/b4KA0as=
   skip_symbols: true
