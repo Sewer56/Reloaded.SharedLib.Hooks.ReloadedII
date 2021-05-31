@@ -26,7 +26,7 @@
 
   <ItemGroup>
     <PackageReference Include="Reloaded.Hooks" Version="3.2.0" />
-    <PackageReference Include="Reloaded.Mod.Interfaces" Version="1.8.0" />
+    <PackageReference Include="Reloaded.Mod.Interfaces" Version="1.9.0" />
   </ItemGroup>
 
   <ItemGroup>
