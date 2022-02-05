@@ -42,9 +42,6 @@ jobs:
         
     - name: Setup AutoChangelog
       run: npm install -g auto-changelog
-
-    - name: Build
-      run: ./Publish.ps1 -MakeDelta true -BuildR2R true
       
     - name: Create Changelog
       run: |
@@ -55,7 +52,10 @@ jobs:
         else {
             auto-changelog --sort-commits date --hide-credit --template keepachangelog --commit-limit false --unreleased --output "$env:PUBLISH_CHANGELOG_PATH"
         }
-         
+        
+    - name: Build
+      run: ./Publish.ps1 -MakeDelta true -BuildR2R true -ChangelogPath "$env:PUBLISH_CHANGELOG_PATH"
+      
     - name: Upload GitHub Release Artifact
       uses: actions/upload-artifact@v2.2.4
       with:
