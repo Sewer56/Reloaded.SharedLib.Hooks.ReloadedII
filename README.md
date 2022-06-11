@@ -123,6 +123,9 @@ Note: The mod loader provides protection against sharing unnecessary libraries b
 **B.** Nothing else needs to be done. This mod will be auto-enabled if required by other mods.
 
 ## How to Use (Developers)
+*Note: Never versions of the Reloaded Mod Template have this library available out of the box.*  
+*In these cases, there isn't anything you need to do.*  
+
 Using a shared library is identical to using a **Controller** in Inter Mod Communication.
 
 **A.** Add the NuGet Package *Reloaded.SharedLib.Hooks* to your project: <a href="https://www.nuget.org/packages/Reloaded.SharedLib.Hooks"><img src="https://img.shields.io/nuget/v/Reloaded.SharedLib.Hooks.svg" alt="NuGet" /></a>
