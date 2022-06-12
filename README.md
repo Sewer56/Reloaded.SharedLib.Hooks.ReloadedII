@@ -26,7 +26,7 @@
 
 The following project is a [Reloaded II](https://github.com/Reloaded-Project/Reloaded-II) Mod Loader Shared Library that serves as both an example on how to build a shared library and general documentation for shared libraries. 
 
-A *"Shared Library"* is basically a mod which exposes library functionality via [Inter Mod Communication](https://github.com/Reloaded-Project/Reloaded-II/blob/master/Docs/InterModCommunication.md).
+A *"Shared Library"* is basically a mod which exposes library functionality via [Dependency Injection](https://reloaded-project.github.io/Reloaded-II/DependencyInjection).
 
 ## What's the Point?
 Normally, each mod is executed by Reloaded II in complete isolation to other mods.
