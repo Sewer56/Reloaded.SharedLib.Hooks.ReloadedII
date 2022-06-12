@@ -112,9 +112,7 @@ Should a mod use both a standalone and shared version, the standalone version wi
 e.g. Calling a method that does not exist in the shared version will fail.
 e.g. But calling a method or field that exists in the shared version will likely work.
 
-The same [rules and recommendations](https://github.com/Reloaded-Project/Reloaded-II/blob/master/Docs/InterModCommunication.md#interface-dlls-are-immutable) apply to Shared Libraries as to mods using Inter Mod Communication.
-
-Note: The mod loader provides protection against sharing unnecessary libraries by only sharing between dependencies. See [Inter Mod Communication: Required Dependencies](https://github.com/Reloaded-Project/Reloaded-II/blob/master/Docs/InterModCommunication.md#required-dependencies).
+The same [rules and recommendations](https://reloaded-project.github.io/Reloaded-II/DependencyInjection/#recommendations-limitations) apply to Shared Libraries as to mods using Dependency Injection.
 
 ## How to Use (End Users)
 
@@ -126,13 +124,13 @@ Note: The mod loader provides protection against sharing unnecessary libraries b
 *Note: Never versions of the Reloaded Mod Template have this library available out of the box.*  
 *In these cases, there isn't anything you need to do.*  
 
-Using a shared library is identical to using a **Controller** in Inter Mod Communication.
+Using a shared library is identical to using a **Controller** in Reloaded's Dependency Injection.
 
 **A.** Add the NuGet Package *Reloaded.SharedLib.Hooks* to your project: <a href="https://www.nuget.org/packages/Reloaded.SharedLib.Hooks"><img src="https://img.shields.io/nuget/v/Reloaded.SharedLib.Hooks.svg" alt="NuGet" /></a>
 
 **B.** Add `reloaded.sharedlib.hooks` as a dependency of the mod `(in ModConfig.json)`.
 
-**C.** Use like a regular **Controller** via [Inter-Mod-Communication](https://github.com/Reloaded-Project/Reloaded-II/blob/master/Docs/InterModCommunication.md#required-dependencies)
+**C.** Use like a regular **Controller** via [Dependency Injection](https://reloaded-project.github.io/Reloaded-II/DependencyInjection/#usage-consumer)
 
 Of course, you should also download and extract the shared library (mod) to your mods folder.
 
