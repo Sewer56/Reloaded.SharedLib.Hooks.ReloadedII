@@ -8,6 +8,7 @@
     <ApplicationIcon />
     <OutputType>WinExe</OutputType>
     <StartupObject />
+    <OutputPath>$(RELOADEDIIMODS)/reloaded.sharedlib.hooks</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,8 +26,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Reloaded.Hooks" Version="3.5.1" />
-    <PackageReference Include="Reloaded.Mod.Interfaces" Version="1.9.0" />
+    <PackageReference Include="Reloaded.Hooks" Version="3.5.4" />
+    <PackageReference Include="Reloaded.Mod.Interfaces" Version="2.1.0" />
   </ItemGroup>
 
   <ItemGroup>
