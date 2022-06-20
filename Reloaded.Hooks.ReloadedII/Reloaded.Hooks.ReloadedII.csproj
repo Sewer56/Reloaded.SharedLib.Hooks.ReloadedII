@@ -9,9 +9,28 @@
     <OutputType>WinExe</OutputType>
     <StartupObject />
     <OutputPath>$(RELOADEDIIMODS)/reloaded.sharedlib.hooks</OutputPath>
+
+    <!-- IL Trimming Support forked from https://github.com/space-wizards/RobustToolbox, under the MIT License -->
+    <!-- If you set this to true, trimming will be enabled when you publish the mod. . Test it using 
+         Test trimming with: `BuildLinked.ps1` in PowerShell. -->
+    <RobustILLink>true</RobustILLink>
+    <TrimmerSingleWarn>false</TrimmerSingleWarn>
   </PropertyGroup>
 
   <ItemGroup>
+    <RobustLinkRoots Include="Reloaded.Hooks.ReloadedII" />
+    <RobustLinkRoots Include="Reloaded.Hooks" />
+    <RobustLinkRoots Include="Reloaded.Hooks.Definitions" />
+
+    <!-- Add assemblies to be trimmed. You might need to add their dependencies too!  -->
+    <RobustLinkAssemblies Include="SharpDisasm" />
+    <RobustLinkAssemblies Include="Iced" />
+  </ItemGroup>
+
+  <Import Project="Robust.Trimming.targets" />
+
+  <ItemGroup>
+    <None Remove="BuildLinked.ps1" />
     <None Remove="ModConfig.json" />
     <None Remove="Preview.png" />
   </ItemGroup>
@@ -26,7 +45,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Reloaded.Hooks" Version="3.5.4" />
+    <PackageReference Include="Reloaded.Hooks" Version="3.5.6" />
     <PackageReference Include="Reloaded.Mod.Interfaces" Version="2.1.0" />
   </ItemGroup>
 
@@ -36,6 +55,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Reloaded.Hooks.ReloadedII.Interfaces\Reloaded.Hooks.ReloadedII.Interfaces.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <NativeLibs Remove="Robust - GoodBackup.Trimming.targets" />
   </ItemGroup>
 
 </Project>
