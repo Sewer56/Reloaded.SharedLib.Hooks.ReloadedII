@@ -23,7 +23,6 @@
     <RobustLinkRoots Include="Reloaded.Hooks.Definitions" />
 
     <!-- Add assemblies to be trimmed. You might need to add their dependencies too!  -->
-    <RobustLinkAssemblies Include="SharpDisasm" />
     <RobustLinkAssemblies Include="Iced" />
   </ItemGroup>
 
@@ -45,8 +44,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Reloaded.Hooks" Version="4.0.1" />
-    <PackageReference Include="Reloaded.Mod.Interfaces" Version="2.1.0" />
+    <PackageReference Include="Reloaded.Hooks" Version="4.2.0" />
+    <PackageReference Include="Reloaded.Mod.Interfaces" Version="2.3.0" />
   </ItemGroup>
 
   <ItemGroup>

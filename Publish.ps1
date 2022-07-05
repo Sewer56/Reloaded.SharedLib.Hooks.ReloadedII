@@ -133,7 +133,7 @@ param (
     $MakeDelta=$False, 
     $ChangelogPath="",
     $Build=$True,
-    $BuildR2R=$True,
+    $BuildR2R=$False,
     
     ## => User Config <= ## 
     $ProjectPath = "Reloaded.Hooks.ReloadedII/Reloaded.Hooks.ReloadedII.csproj",
