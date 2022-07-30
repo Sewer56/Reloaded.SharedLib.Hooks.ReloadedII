@@ -61,7 +61,7 @@ jobs:
         }
         
     - name: Build
-      run: ./Publish.ps1 -MakeDelta true -ChangelogPath "$env:PUBLISH_CHANGELOG_PATH"
+      run: ./Publish.ps1 -MakeDelta true -BuildR2R true -ChangelogPath "$env:PUBLISH_CHANGELOG_PATH"
       
     - name: Upload GitHub Release Artifact
       uses: actions/upload-artifact@v2.2.4
